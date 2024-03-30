@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
   modalTriggerButtons.forEach(function (button) {
     button.addEventListener('click', function () {
       // Get the target modal ID from the data-modal-target attribute
-      var modalId = button.getAttribute('data-modal-target');
-
+      var modalId = button.dataset.modalTarget;
+    
       // Get the target modal element
       var modal = document.querySelector(modalId);
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   modalCloseButtons.forEach(function (button) {
     button.addEventListener('click', function () {
       // Get the modal ID to be closed from the data-modal-close attribute
-      var modalId = button.getAttribute('data-modal-close');
+      var modalId = button.dataset.modalClose;
 
       // Get the modal element to be closed
       var modal = document.querySelector(modalId);
